@@ -1,5 +1,10 @@
 browser: edge
 
+hub:
+  protocol: http
+  host: localhost
+  port: 4444
+
 spring:
   profiles:
     active: local
