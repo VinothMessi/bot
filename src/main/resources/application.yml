@@ -1,0 +1,5 @@
+browser: edge
+
+spring:
+  profiles:
+    active: local

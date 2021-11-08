@@ -1,0 +1,21 @@
+# Add the repository key to the system
+wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
+
+#  Append the Debian package repository address to the server’s sources.list
+sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+
+apt-get install
+apt-get update
+
+# Install Jenkins and its dependencies
+apt-get install jenkins
+
+# Start Jenkins
+systemctl start jenkins
+systemctl status jenkins
+
+# Set up a UFW firewall
+ufw allow 8080
+ufw allow OpenSSH
+ufw enable
+ufw status

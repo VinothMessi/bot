@@ -1,0 +1,10 @@
+# Add Jenkins User into Docker group
+sudo gpasswd -a jenkins docker
+sudo gpasswd -a jenkins root
+sudo service docker restart
+
+sudo groupadd docker
+sudo usermod -aG docker $USER
+
+# Logout and Login
+docker info

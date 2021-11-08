@@ -1,0 +1,45 @@
+# Install docker in Ubuntu 20.0.4 LTS
+sudo -i (get to root user)
+
+apt-get remove docker docker-engine docker.io containerd runc (remove previous docker instances)
+
+apt-get update (update apt package index)
+
+apt-get install \
+    ca-certificates \
+    curl \
+    gnupg \
+    lsb-release (install packages to allow apt to use a repository over HTTP)
+
+# Add Docker’s official GPG key
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+
+sudo apt install apt-transport-https ca-certificates curl software-properties-common
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu artful stable"
+
+# Update the apt package index, and install the latest version of Docker Engine and containerd
+apt-get install
+apt-get update
+apt-get install docker-ce docker-ce-cli containerd.io
+apt-get update
+
+# Verify docker installation
+docker --version
+docker info
+docker version
+
+# Install docker-compose in Ubuntu 20.0.4 LTS
+
+# Download current stable version
+curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+
+# Apply executable permissions
+chmod +x /usr/local/bin/docker-compose
+
+# Verify docker-compose installation
+docker-compose --version
+
+# Enable docker
+sudo systemctl start docker
+sudo systemctl enable docker
