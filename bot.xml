@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Automation Bot">
+
+    <test name="Sanity Testing">
+
+        <classes>
+
+            <class name="com.auto.bot.tests.Sanity"/>
+
+        </classes>
+
+    </test> <!-- Test -->
+
+</suite> <!-- Suite -->
