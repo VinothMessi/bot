@@ -33,20 +33,26 @@ class Remote {
     @ConditionalOnProperty(name = "browser", havingValue = "chrome")
     public
     WebDriver remoteChrome() throws MalformedURLException {
-        return new RemoteWebDriver(new URL(protocol + "://" + host + ":" + port), new ChromeOptions());
+        ChromeOptions options = new ChromeOptions();
+        options.setCapability("se:recordVideo", true);
+        return new RemoteWebDriver(new URL(this.protocol + "://" + this.host + ":" + this.port), options);
     }
 
     @Bean
     @ConditionalOnProperty(name = "browser", havingValue = "edge")
     public
     WebDriver remoteEdge() throws MalformedURLException {
-        return new RemoteWebDriver(new URL(protocol + "://" + host + ":" + port), new EdgeOptions());
+        EdgeOptions options = new EdgeOptions();
+        options.setCapability("se:recordVideo", true);
+        return new RemoteWebDriver(new URL(this.protocol + "://" + this.host + ":" + this.port), options);
     }
 
     @Bean
     @ConditionalOnProperty(name = "browser", havingValue = "firefox")
     public
     WebDriver remoteFirefox() throws MalformedURLException {
-        return new RemoteWebDriver(new URL(protocol + "://" + host + ":" + port), new FirefoxOptions());
+        FirefoxOptions options = new FirefoxOptions();
+        options.setCapability("se:recordVideo", true);
+        return new RemoteWebDriver(new URL(this.protocol + "://" + this.host + ":" + this.port), options);
     }
 }

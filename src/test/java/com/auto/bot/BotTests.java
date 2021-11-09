@@ -8,7 +8,7 @@ import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 @SpringBootTest
 public
 abstract
-class BaseTests extends AbstractTestNGSpringContextTests {
+class BotTests extends AbstractTestNGSpringContextTests {
     @Autowired
     protected WebDriver browser;
 }

@@ -1,6 +1,6 @@
 package com.auto.bot.tests;
 
-import com.auto.bot.BaseTests;
+import com.auto.bot.BotTests;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public
-class Sanity extends BaseTests {
+class Sanity extends BotTests {
     @Test
     public
     void sanity() {
