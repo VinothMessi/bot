@@ -6,10 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Lazy;
-import org.springframework.context.annotation.Profile;
+import org.springframework.context.annotation.*;
 
 @Lazy
 @Configuration
@@ -18,6 +15,7 @@ public
 class Local {
     @Bean
     @ConditionalOnProperty(name = "browser", havingValue = "chrome")
+    @Scope("browserscope")
     public
     WebDriver chrome() {
         WebDriverManager.chromedriver().setup();
@@ -26,6 +24,7 @@ class Local {
 
     @Bean
     @ConditionalOnProperty(name = "browser", havingValue = "edge")
+    @Scope("browserscope")
     public
     WebDriver edge() {
         WebDriverManager.edgedriver().setup();
@@ -34,6 +33,7 @@ class Local {
 
     @Bean
     @ConditionalOnProperty(name = "browser", havingValue = "firefox")
+    @Scope("browserscope")
     public
     WebDriver firefox() {
         WebDriverManager.firefoxdriver().setup();

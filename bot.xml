@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="Automation Bot">
+<suite name="Automation Bot" parallel="tests">
 
-    <test name="Sanity Testing">
-
+    <test name="Google Test">
         <classes>
-
-            <class name="com.auto.bot.tests.Sanity"/>
-
+            <class name="com.auto.bot.tests.GoogleTest"/>
         </classes>
+    </test> <!-- Test -->
 
+    <test name="Visa Test">
+        <classes>
+            <class name="com.auto.bot.tests.VisaTest"/>
+        </classes>
     </test> <!-- Test -->
 
 </suite> <!-- Suite -->

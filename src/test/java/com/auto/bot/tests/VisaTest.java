@@ -8,11 +8,11 @@ import org.testng.annotations.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public
-class Sanity extends BotTests {
+class VisaTest extends BotTests {
     @Test
     public
-    void sanity() {
-        System.out.println("Sanity Test Case");
+    void visa() {
+        System.out.println("Visa Test");
 
         browser.manage().window().maximize();
         browser.navigate().to("https://vins-udemy.s3.amazonaws.com/sb/visa/udemy-visa.html");

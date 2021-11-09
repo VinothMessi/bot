@@ -7,10 +7,7 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Lazy;
-import org.springframework.context.annotation.Profile;
+import org.springframework.context.annotation.*;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -31,6 +28,7 @@ class Remote {
 
     @Bean
     @ConditionalOnProperty(name = "browser", havingValue = "chrome")
+    @Scope("browserscope")
     public
     WebDriver remoteChrome() throws MalformedURLException {
         ChromeOptions options = new ChromeOptions();
@@ -40,6 +38,7 @@ class Remote {
 
     @Bean
     @ConditionalOnProperty(name = "browser", havingValue = "edge")
+    @Scope("browserscope")
     public
     WebDriver remoteEdge() throws MalformedURLException {
         EdgeOptions options = new EdgeOptions();
@@ -49,6 +48,7 @@ class Remote {
 
     @Bean
     @ConditionalOnProperty(name = "browser", havingValue = "firefox")
+    @Scope("browserscope")
     public
     WebDriver remoteFirefox() throws MalformedURLException {
         FirefoxOptions options = new FirefoxOptions();
