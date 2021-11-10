@@ -17,6 +17,6 @@ flight:
 
 spring:
   profiles:
-    active: remote
+    active: local
   jpa:
     defer-datasource-initialization: true

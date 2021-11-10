@@ -3,7 +3,7 @@
 
 <suite name="Automation Bot" parallel="classes">
 
-    <test name="Visa and Flight Registration">
+    <test name="Visa Registration and Flight Booking">
 
         <classes>
             <class name="com.auto.bot.tests.VisaRegistration"/>
