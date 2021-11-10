@@ -5,6 +5,11 @@ hub:
   host: localhost
   port: 4444
 
+visa:
+  url: https://vins-udemy.s3.amazonaws.com/sb/visa/udemy-visa.html
+  heading: VISA Registration Form
+  subHeading: Fill out the form carefully for registration
+
 spring:
   profiles:
-    active: remote
+    active: local
