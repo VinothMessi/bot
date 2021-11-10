@@ -1,0 +1,37 @@
+{
+  "acceptInsecureCerts": false,
+  "browserName": "chrome",
+  "browserVersion": "95.0.4638.69",
+  "chrome": {
+    "chromedriverVersion": "95.0.4638.54 (d31a821ec901f68d0d34ccdbaea45b4c86ce543e-refs\u002fbranch-heads\u002f4638@{#871})",
+    "userDataDir": "\u002ftmp\u002f.com.google.Chrome.bYZrwh"
+  },
+  "goog:chromeOptions": {
+    "args": [
+    ],
+    "extensions": [
+    ]
+  },
+  "networkConnectionEnabled": false,
+  "pageLoadStrategy": "normal",
+  "platformName": "linux",
+  "proxy": {
+  },
+  "se:cdp": "ws:\u002f\u002f172.20.0.5:4444\u002fsession\u002fa451ba10934c787619f0368fe045de92\u002fse\u002fcdp",
+  "se:cdpVersion": "95.0.4638.69",
+  "se:recordVideo": true,
+  "se:vnc": "ws:\u002f\u002f172.20.0.5:4444\u002fsession\u002fa451ba10934c787619f0368fe045de92\u002fse\u002fvnc",
+  "se:vncEnabled": true,
+  "se:vncLocalAddress": "ws:\u002f\u002f172.20.0.5:7900",
+  "setWindowRect": true,
+  "strictFileInteractability": false,
+  "timeouts": {
+    "implicit": 0,
+    "pageLoad": 300000,
+    "script": 30000
+  },
+  "unhandledPromptBehavior": "dismiss and notify",
+  "webauthn:extension:credBlob": true,
+  "webauthn:extension:largeBlob": true,
+  "webauthn:virtualAuthenticators": true
+}

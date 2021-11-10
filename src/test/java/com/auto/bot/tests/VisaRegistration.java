@@ -2,6 +2,7 @@ package com.auto.bot.tests;
 
 import com.auto.bot.BaseTest;
 import com.auto.bot.appdetails.Visa;
+import com.auto.bot.visapages.VisaForm;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -10,6 +11,10 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public
 class VisaRegistration extends BaseTest {
+    @Autowired
+    private
+    VisaForm visaForm;
+
     @Autowired
     private Visa visaApp;
 

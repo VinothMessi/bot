@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="Automation Bot">
+<suite name="Automation Bot" parallel="classes">
 
-    <test name="Visa Registration">
+    <test name="Visa and Flight Registration">
 
         <classes>
             <class name="com.auto.bot.tests.VisaRegistration"/>
+            <class name="com.auto.bot.tests.FlightBooking"/>
         </classes>
 
     </test> <!-- Test -->

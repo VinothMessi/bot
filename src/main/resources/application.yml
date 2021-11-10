@@ -1,4 +1,4 @@
-browser: edge
+browser: chrome
 
 hub:
   protocol: http
@@ -10,6 +10,13 @@ visa:
   heading: VISA Registration Form
   subHeading: Fill out the form carefully for registration
 
+flight:
+  url: https://vins-udemy.s3.amazonaws.com/docker/docker-book-flight.html
+  heading: Docker Flight Booking Application
+  subHeading: User Registration Form
+
 spring:
   profiles:
-    active: local
+    active: remote
+  jpa:
+    defer-datasource-initialization: true
