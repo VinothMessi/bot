@@ -7,4 +7,5 @@ sudo groupadd docker
 sudo usermod -aG docker $USER
 
 # Logout and Login
+docker --version
 docker info
