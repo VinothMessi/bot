@@ -20,4 +20,4 @@ video-image = "selenium/video:ffmpeg-4.3.1-20211105"
 # Fill out the placeholders with appropriate values
 #[server]
 #host = <ip-from-node-machine>
-#port = <port-from-node-machine>
+#port = <port-from-node-machine
