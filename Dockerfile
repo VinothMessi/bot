@@ -18,6 +18,7 @@ COPY config.toml config.toml
 COPY selenium-grid.yml selenium-grid.yml
 COPY dynamic-selenium-grid.yml dynamic-selenium-grid.yml
 COPY bot.xml bot.xml
+COPY checkHub.sh checkHub.sh
 
 # Create an Image
 FROM openjdk:11-jre-slim
@@ -40,5 +41,6 @@ COPY selenium-grid.yml selenium-grid.yml
 COPY dynamic-selenium-grid.yml dynamic-selenium-grid.yml
 COPY bot.xml bot.xml
 COPY pom.xml pom.xml
+COPY checkHub.sh checkHub.sh
 
 ENTRYPOINT sh checkHub.sh
