@@ -9,7 +9,6 @@ services:
       - "4442:4442"
       - "4443:4443"
       - "4444:4444"
-
   chrome:
     image: selenium/node-chrome:4.1.0-prerelease-20211105
     shm_size: 2gb
@@ -23,7 +22,6 @@ services:
       - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
     deploy:
       replicas: 2
-
   edge:
     image: selenium/node-edge:4.1.0-prerelease-20211105
     shm_size: 2gb
@@ -38,7 +36,6 @@ services:
       - SE_NODE_GRID_URL=http://localhost:4444
     deploy:
       replicas: 2
-
   firefox:
     image: selenium/node-firefox:4.1.0-prerelease-20211105
     shm_size: 2gb
@@ -53,6 +50,20 @@ services:
       - SE_NODE_GRID_URL=http://localhost:4444
     deploy:
       replicas: 2
+  bot:
+    image: vinothmessi/bot:v1.0
+    depends_on:
+      - chrome
+      - edge
+      - firefox
+    networks:
+      - grid-network
+    environment:
+      - PROFILE=remote
+      - BROWSER=chrome
+      - HOST=192.168.72.225
+      - PORT=4444
+      - MODULE=bot.xml
 
 networks:
   grid-network:

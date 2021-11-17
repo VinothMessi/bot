@@ -41,4 +41,4 @@ COPY dynamic-selenium-grid.yml dynamic-selenium-grid.yml
 COPY bot.xml bot.xml
 COPY pom.xml pom.xml
 
-ENTRYPOINT java -cp bot.jar:bot.jar.original:bot-tests.jar:libs/* -Dspring.profiles.active=$PROFILE -Dbrowser=$BROWSER -Dhub.host=$HOST -Dhub.port=$PORT org.testng.TestNG $MODULE
+ENTRYPOINT sh checkHub.sh
