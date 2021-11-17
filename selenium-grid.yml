@@ -50,7 +50,7 @@ services:
       - SE_NODE_GRID_URL=http://localhost:4444
     deploy:
       replicas: 2
-  bot:
+  bot-chrome:
     image: vinothmessi/bot:v1.0
     depends_on:
       - chrome
@@ -61,6 +61,34 @@ services:
     environment:
       - PROFILE=remote
       - BROWSER=chrome
+      - HOST=192.168.72.225
+      - PORT=4444
+      - MODULE=bot.xml
+  bot-edge:
+    image: vinothmessi/bot:v1.0
+    depends_on:
+      - chrome
+      - edge
+      - firefox
+    networks:
+      - grid-network
+    environment:
+      - PROFILE=remote
+      - BROWSER=edge
+      - HOST=192.168.72.225
+      - PORT=4444
+      - MODULE=bot.xml
+  bot-firefox:
+    image: vinothmessi/bot:v1.0
+    depends_on:
+      - chrome
+      - edge
+      - firefox
+    networks:
+      - grid-network
+    environment:
+      - PROFILE=remote
+      - BROWSER=firefox
       - HOST=192.168.72.225
       - PORT=4444
       - MODULE=bot.xml
