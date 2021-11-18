@@ -21,6 +21,13 @@ pipeline {
         echo 'Docker Image built successfully'
       }
     }
+    stage('Push Docker Image') {
+      steps {
+        echo 'Pushing my Docker Image'
+        sh 'docker push ${IMAGE_REPO_NAME}:${IMAGE_TAG_NAME}'
+        echo 'Image pushed successfully'
+      }
+    }
     stage('Test execution') {
       steps {
         echo 'Initiating Test execution'
