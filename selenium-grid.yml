@@ -61,7 +61,7 @@ services:
     environment:
       - PROFILE=remote
       - BROWSER=chrome
-      - HOST=192.168.72.225
+      - HOST=34.125.39.234
       - PORT=4444
       - MODULE=bot.xml
   bot-edge:
@@ -75,7 +75,7 @@ services:
     environment:
       - PROFILE=remote
       - BROWSER=edge
-      - HOST=192.168.72.225
+      - HOST=34.125.39.234
       - PORT=4444
       - MODULE=bot.xml
   bot-firefox:
@@ -89,7 +89,7 @@ services:
     environment:
       - PROFILE=remote
       - BROWSER=firefox
-      - HOST=192.168.72.225
+      - HOST=34.125.39.234
       - PORT=4444
       - MODULE=bot.xml
 
