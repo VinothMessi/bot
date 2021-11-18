@@ -3,6 +3,8 @@ pipeline {
   environment {
     IMAGE_REPO_NAME="vinothmessi/bot"
     COMPOSE_FILE_NAME="selenium-grid.yml"
+    USERNAME="vinothmessi"
+    PASSWORD="Messi123!@"
   }
   stages {
     stage('Clone GitHub Repository') {
@@ -23,6 +25,7 @@ pipeline {
     stage('Push Docker Image') {
       steps {
         echo 'Pushing my Docker Image'
+        sh 'docker login -u ${USERNAME} -p ${PASSWORD}'
         sh 'docker push ${IMAGE_REPO_NAME}'
         echo 'Image pushed successfully'
       }
