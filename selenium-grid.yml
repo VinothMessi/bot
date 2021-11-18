@@ -51,7 +51,7 @@ services:
     deploy:
       replicas: 2
   bot-chrome:
-    image: vinothmessi/bot:v1.0
+    image: vinothmessi/bot
     depends_on:
       - chrome
       - edge
@@ -65,7 +65,7 @@ services:
       - PORT=4444
       - MODULE=bot.xml
   bot-edge:
-    image: vinothmessi/bot:v1.0
+    image: vinothmessi/bot
     depends_on:
       - chrome
       - edge
@@ -79,7 +79,7 @@ services:
       - PORT=4444
       - MODULE=bot.xml
   bot-firefox:
-    image: vinothmessi/bot:v1.0
+    image: vinothmessi/bot
     depends_on:
       - chrome
       - edge
